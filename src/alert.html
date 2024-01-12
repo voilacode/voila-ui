@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.9.0/styles/default.min.css">
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@10.9.0"></script>
+
+    <title>Alert</title>
+</head>
+<body>
+    <header class="max-w-screen-xl p-4 mx-auto border-b sm:px-16">
+        <nav class="flex items-center justify-between mx-auto">
+            <!--logo image-->
+            <div>
+                <img src="https://fresherbot.com/storage/core/assets/fresherbot_logo_dark.png" alt="logo" width="170px" height="auto">
+            </div>
+
+            <!--list items-->
+            <div class="absolute top-[-100%] lg:static nav-links duration-500 bg-white mx-auto">
+                <ul class="flex flex-col w-screen lg:flex-row gap-y-5 lg:gap-12 lg:w-auto">
+                    <li>
+                        <a href="#" class="hover:text-blue-600">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-blue-600">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-blue-600">Colleges</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-blue-600">Developers</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-blue-600">Courses</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--sign in btn-->
+            <div class="flex items-center gap-2">
+                <button class="px-5 py-2 text-white duration-200 bg-blue-600 rounded-full shadow-xl hover:bg-gray-400">Log In</button>
+                <ion-icon name="menu" class="text-3xl lg:hidden md hydrated" onclick="onToggleMenu(this)" role="img" aria-label="menu"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section  class="max-w-screen-xl p-4 mx-auto my-4 sm:px-16">
+            <div class=" sm:space-x-8 sm:flex">
+                <div class=" sm:w-1/5">
+                    <ul class="flex flex-col p-2 space-y-4">
+                        <li class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">Alert</li>
+                        <li class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-gray-300">Navbar</li>
+                        <li class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-gray-300">Megamenu</li>
+                        <li class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-gray-300">Navbar with Dropdown</li>
+                        <li class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-gray-300">Tooltip</li>
+                        <li class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-gray-300">Accordion</li>
+                        <li class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-gray-300">Modal</li>
+                        <li class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-gray-300">Carousel</li>
+                        <li class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-gray-300">Tabs</li>
+                    </ul>
+                </div>
+
+                <div class="col-span-9 p-4 border border-gray-200 rounded-lg shadow-2xl sm:p-8 sm:w-4/5">
+                    <h1 class="flex text-3xl font-semibold">
+                        <div  class="my-auto pe-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                          </svg></div>
+                        
+                          <span>Alert</span>
+                        </h1>
+                    <p class="my-2 text-justify text-gray-700">An "alert" typically refers to a user interface element that displays a brief message to provide information, feedback, or notifications to the user. It is a simple and commonly used way to communicate with users in a browser environment. Alerts are often used to convey important information or prompt the user for action.</p>
+                    <p class="my-2 text-justify text-gray-700">VoilaUI uses different ids to provide the functionality of making the alert appear when clicked on the button which is the id <i class="text-emerald-500">showBtn</i> for the below case </p>
+
+                    <img src="../assets/alert.png" alt="alert" class="block mx-auto my-2">
+
+                    <p class="mt-2 text-justify text-gray-700">The alert container includes a close button which will come into action by using the id <i class="text-emerald-500">closeBtn</i> in the alert box container</p>
+
+                    <h1 class="my-2 text-xl font-semibold uppercase">HTML</h1>
+                    <pre class="px-4 mx-auto my-2 text-white bg-gray-800 rounded-lg hljs max-w-100 sm:max-w-[85%]" >
+                        <code class="w-1/2 whitespace-pre-wrap html" style="max-width: 50%;">
+                            &lt;div class="flex items-center justify-center h-screen "&gt;
+                            &lt;button id="showBtn" class="px-4 py-2 text-white duration-300 rounded bg-rose-600 hover:bg-rose-700"&gt;Submit&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div id="alert" class="fixed bottom-0 right-0 hidden p-4 my-4 border-l-4 rounded-lg shadow-xl ms-4 border-emerald-500 "&gt;
+                            &lt;ion-icon name="close" id="closeBtn" class="flex justify-end text-xl ms-auto hover:cursor-pointer" onclick="onToggleMenu(this)"&gt;&lt;/ion-icon&gt;
+                            &lt;h1 class="px-4 text-xl font-semibold text-emerald-600"&gt;Success&lt;/h1&gt;
+                            &lt;p class="p-4 h-fit"&gt;You have successfully submitted the details.&lt;/p&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                    
+                     
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+          document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+          });
+        });
+      </script>
+      
+</body>
+</html>
