@@ -1,0 +1,32 @@
+<script type="text/JavaScript">
+    /**
+ * Convert a string to HTML entities
+ */
+function convertHTML(str) {
+  // Use Object Lookup to declare as many HTML entities as needed.
+  const htmlEntities = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&apos;"
+  };
+  //Use map function to return a filtered str with all entities changed automatically.
+  return str
+    .split("")
+    .map(entity => htmlEntities[entity] || entity)
+    .join("");
+}
+  function httpGet(theUrl)
+  {
+    var xmlHttp = null;
+
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+  }
+  var html = httpGet("desktop.html");
+  var doc = new DOMParser().parseFromString(html, "text/xml");
+    console.log(doc.getElementsByTagName("body"));
+  </script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../../dist/output.css" rel="stylesheet">
+    <title>Alert</title><!--- voilaui-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/lightfair.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="../../../dist/codeview.js"></script>
+</head>
+
+<body class="p-3 m-0">
+    <section id="code">
+        <!--Alert #1-->
+        <div class="relative p-4 my-3 bg-white border-t border-l-4 rounded-lg shadow-xl alert-box border-emerald-500 ">
+            <h1 class="text-xl font-semibold text-emerald-600 alert-close">Success</h1>
+            <p class="pt-1">Hey! you are now seeing an alertbox with a close action.</p>
+            <button class="absolute cursor-pointer top-2 right-3 alert-close"> &#10005;</button>
+        </div>
+        <!--Alert #2-->
+        <div class="relative p-4 my-3 bg-white border-t border-l-4 border-red-500 rounded-lg shadow-xl alert-box ">
+            <h1 class="text-xl font-semibold text-red-600 alert-close">Failure</h1>
+            <p class="pt-1">Hey! you are now seeing an alertbox with a close action.</p>
+            <button class="absolute cursor-pointer top-2 right-3 alert-close"> &#10005;</button>
+        </div>
+    </section>
+</body>
+<script>
+    // Listen for alert click events
+    const alerts = document.querySelectorAll('.alert-close');
+    alerts.forEach(alert => {
+        alert.addEventListener('click', function handleClick(event) {
+            const box = event.target.closest(".alert-box");
+            box.classList.add('hidden');
+        });
+    });
+</script>
+
+</html>
