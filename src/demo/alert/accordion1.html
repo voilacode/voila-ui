@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../../dist/output.css" rel="stylesheet">
+    <title>Accordion</title>
+    <!--- voilaui-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/lightfair.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="../../../dist/codeview.js"></script>
+</head>
+
+<body class="p-2 m-0">
+    <section id="accordion">
+        <!-- Section 1 -->
+        <div class="accordion-section">
+            <div class="accordion-header">
+                <h1 class="text-xl font-semibold text-emerald-600 dark:text-emerald-500">Section 1</h1>
+                <button class="accordion-toggle">&#9660;</button>
+            </div>
+            <div class="accordion-content">
+                <p class="dark:text-gray-200">Content for section 1 goes here.</p>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="accordion-section">
+            <div class="accordion-header">
+                <h1 class="text-xl font-semibold text-red-600 dark:text-red-500">Section 2</h1>
+                <button class="accordion-toggle">&#9660;</button>
+            </div>
+            <div class="accordion-content">
+                <p class="dark:text-gray-200">Content for section 2 goes here.</p>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="accordion-section">
+            <div class="accordion-header">
+                <h1 class="text-xl font-semibold text-sky-600 dark:text-sky-400">Section 3</h1>
+                <button class="accordion-toggle">&#9660;</button>
+            </div>
+            <div class="accordion-content">
+                <p class="dark:text-gray-200">Content for section 3 goes here.</p>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="accordion-section">
+            <div class="accordion-header">
+                <h1 class="text-xl font-semibold text-yellow-500">Section 4</h1>
+                <button class="accordion-toggle">&#9660;</button>
+            </div>
+            <div class="accordion-content">
+                <p class="dark:text-gray-200">Content for section 4 goes here.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Listen for accordion toggle events
+        const accordionToggles = document.querySelectorAll('.accordion-toggle');
+        accordionToggles.forEach(toggle => {
+            toggle.addEventListener('click', function handleToggle() {
+                const section = toggle.closest(".accordion-section");
+                const content = section.querySelector('.accordion-content');
+
+                // Toggle the content visibility
+                content.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
