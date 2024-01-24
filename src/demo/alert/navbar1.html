@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../../dist/output.css" rel="stylesheet">
+    <title>Navbar</title>
+    <!--- voilaui-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/lightfair.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 10px; /* Adjust the margin as needed */
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #45a049;
+        }
+
+        #nav-toggle {
+            display: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+
+            .logo {
+                margin: 0;
+            }
+
+            #nav-toggle {
+                display: block;
+            }
+
+            #nav-toggle:hover {
+                background-color: #45a049;
+            }
+
+            #nav-toggle.active {
+                background-color: #45a049;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                top: 60px; /* Adjust the top position as needed */
+                left: 0;
+                width: 100%;
+                background-color: #4CAF50;
+                display: none;
+                z-index: 1;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body class="p-2 m-0">
+    <nav id="code">
+        <div class="logo">Your Logo</div>
+        <div id="nav-toggle">&#9776;</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#" style="margin-left: auto; background-color: #45a049; padding: 10px 16px; border: none; color: white;">Contact</a>
+        </div>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="../../../dist/codeview.js"></script>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
