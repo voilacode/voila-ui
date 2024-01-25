@@ -17,56 +17,56 @@
  <section id="code">   
      <!-- Navbar -->
      
-  <nav class="fixed w-full bg-white shadow-lg z-20 top-0 left-0 ">
-    <div class="max-w-screen-xl px-4 py-3 sm:px-16 flex flex-wrap items-center justify-between mx-auto">
+  <nav class="fixed top-0 left-0 z-20 w-full bg-white shadow-lg ">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 py-3 mx-auto sm:px-16">
       <a href="./index.html" class="flex items-center">
         <img src="../assets/WhatsApp_Image_2023-10-16_at_10.22.22_AM-removebg-preview (1).png" width="180" alt="">
       </a>
       <div class="flex lg:order-2">
-        <a class="text-white bg-red-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-md  hover:outline-1 py-2 px-4 text-center cursor-pointer mr-3 lg:mr-0">Contact us</a>
-        <button id="navbarToggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden  bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <a class="px-4 py-2 mr-3 font-medium text-center text-white bg-red-600 rounded-lg cursor-pointer focus:ring-4 focus:outline-none text-md hover:outline-1 lg:mr-0">Contact us</a>
+        <button id="navbarToggle" type="button" class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm bg-gray-100 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
           </svg>
         </button>
       </div>
       <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
-        <ul class="links flex flex-col  lg:p-0  font-medium lg:text-md rounded-lg lg:flex-row lg:space-x-6 my-2 lg:border-0 dark:border-gray-700">
+        <ul class="flex flex-col my-2 font-medium rounded-lg links lg:p-0 lg:text-md lg:flex-row lg:space-x-6 lg:border-0 dark:border-gray-700">
             <li>
-                <a href="#" class="block py-2 mt-2 lg:mx-6 lg:pl-5  pr-6  lg:p-0  text-lg text-gray-500 font-semibold hover:text-red-500 duration-500">Home</a>
+                <a href="#" class="block py-2 pr-6 mt-2 text-lg font-semibold text-gray-500 duration-500 lg:mx-6 lg:pl-5 lg:p-0 hover:text-red-500">Home</a>
             </li>
             <li>
-                <a href="#" class="block py-2 mt-2 lg:mx-6 lg:pl-5  pr-6  lg:p-0 text-lg text-gray-500 font-semibold hover:text-red-500 duration-500">Blog</a>
+                <a href="#" class="block py-2 pr-6 mt-2 text-lg font-semibold text-gray-500 duration-500 lg:mx-6 lg:pl-5 lg:p-0 hover:text-red-500">Blog</a>
             </li>
             <li>
-                <a href="#" class="block py-2 mt-2 lg:mx-6 lg:pl-5   pr-6  lg:p-0 text-lg text-gray-500 font-semibold hover:text-red-500 duration-500">About</a>
+                <a href="#" class="block py-2 pr-6 mt-2 text-lg font-semibold text-gray-500 duration-500 lg:mx-6 lg:pl-5 lg:p-0 hover:text-red-500">About</a>
             </li>
             <li>
               <div class="relative inline-block text-left group">
-                  <div id="dropdown-trigger-1" class="cursor-pointer py-2 mt-2 lg:mx-6 lg:pl-5  pr-6  lg:p-0 text-lg text-gray-500 font-semibold hover:text-red-500 duration-500">Services</div>
+                  <div id="dropdown-trigger-1" class="py-2 pr-6 mt-2 text-lg font-semibold text-gray-500 duration-500 cursor-pointer lg:mx-6 lg:pl-5 lg:p-0 hover:text-red-500">Services</div>
               
-                  <div id="dropdown-menu-1" class="origin-top-right absolute right-0 lg:left-1 left-32 lg:mt-5 -mt-10 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden opacity-0 group-hover:opacity-100 transition ease-in-out duration-300">
+                  <div id="dropdown-menu-1" class="absolute right-0 hidden w-40 -mt-10 transition duration-300 ease-in-out origin-top-right bg-white rounded-md shadow-lg opacity-0 lg:left-1 left-32 lg:mt-5 ring-1 ring-black ring-opacity-5 group-hover:opacity-100">
                       <div class="py-1" role="menu" aria-orientation="vertical">
-                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-500 duration-500" role="menuitem">Service 1</a>
-                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-500 duration-500" role="menuitem">Service 2</a>
-                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-500 duration-500" role="menuitem">Service 3</a>
-                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-500 duration-500" role="menuitem">Service 4</a>
-                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-500 duration-500" role="menuitem">Service 5</a>
+                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 duration-500 hover:bg-gray-100 hover:text-red-500" role="menuitem">Service 1</a>
+                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 duration-500 hover:bg-gray-100 hover:text-red-500" role="menuitem">Service 2</a>
+                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 duration-500 hover:bg-gray-100 hover:text-red-500" role="menuitem">Service 3</a>
+                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 duration-500 hover:bg-gray-100 hover:text-red-500" role="menuitem">Service 4</a>
+                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 duration-500 hover:bg-gray-100 hover:text-red-500" role="menuitem">Service 5</a>
                       </div>
                   </div>
               </div>
             </li>
             <li>
               <div class="relative inline-block text-left group">
-                  <div id="dropdown-trigger-2" class="cursor-pointer py-2 mt-2 lg:mx-6 lg:pl-5  pr-6  lg:p-0 text-lg text-gray-500 font-semibold hover:text-red-500 duration-500">Product</div>
+                  <div id="dropdown-trigger-2" class="py-2 pr-6 mt-2 text-lg font-semibold text-gray-500 duration-500 cursor-pointer lg:mx-6 lg:pl-5 lg:p-0 hover:text-red-500">Product</div>
               
-                  <div id="dropdown-menu-2" class="origin-top-right absolute right-0 left-1   mt-5 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden opacity-0 group-hover:opacity-100 transition ease-in-out duration-300">
+                  <div id="dropdown-menu-2" class="absolute right-0 hidden w-40 mt-5 transition duration-300 ease-in-out origin-top-right bg-white rounded-md shadow-lg opacity-0 left-1 ring-1 ring-black ring-opacity-5 group-hover:opacity-100">
                       <div class="py-1" role="menu" aria-orientation="vertical">
-                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-500 duration-500" role="menuitem">Product 1</a>
-                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-500 duration-500" role="menuitem">Product 2</a>
-                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-500 duration-500" role="menuitem">Product 3</a>
-                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-500 duration-500" role="menuitem">Product 4</a>
-                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-500 duration-500" role="menuitem">Product 5</a>
+                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 duration-500 hover:bg-gray-100 hover:text-red-500" role="menuitem">Product 1</a>
+                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 duration-500 hover:bg-gray-100 hover:text-red-500" role="menuitem">Product 2</a>
+                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 duration-500 hover:bg-gray-100 hover:text-red-500" role="menuitem">Product 3</a>
+                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 duration-500 hover:bg-gray-100 hover:text-red-500" role="menuitem">Product 4</a>
+                          <a href="#" class="block px-4 py-3 text-sm text-gray-700 duration-500 hover:bg-gray-100 hover:text-red-500" role="menuitem">Product 5</a>
                       </div>
                   </div>
               </div>
@@ -79,7 +79,7 @@
 
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script src="../../../dist/codeview.js"></script>
+<script src="../../../dist/codeview.js"></script>
     <script>
        document.getElementById('navbarToggle').addEventListener('click', function () {
         document.getElementById('navbar-sticky').classList.toggle('hidden');

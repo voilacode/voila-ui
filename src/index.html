@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/output.css" rel="stylesheet">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>VoilaUI</title>
 </head>
 
@@ -14,7 +15,7 @@
         <nav class="flex items-center justify-between mx-auto">
             <!--logo image-->
             <div>
-                <img src="../assets/VoilaUI.png" alt="logo" width="170px"
+                <img src="./voilauiassets/VoilaUI.png" alt="logo" width="170px"
                     height="auto">
             </div>
 
@@ -60,47 +61,61 @@
     </header>
 
     <main>
-
-        <section class="p-4 mx-auto my-4 max-w-screen-2xl sm:px-16">
+        <section class="px-4 mx-auto max-w-screen-2xl sm:px-16">
             <div class=" sm:space-x-8 sm:flex">
-                <div class=" sm:w-1/5">
-                    <ul class="flex flex-col p-2 space-y-4">
+                <div class="hidden h-screen overflow-hidden md:block md:w-1/5">
+                    <ul class="flex flex-col lg:p-2 space-y-4 bg-gradient-to-b from-violet-600 from-50% via-violet-400 to-blue-400 to-100%  text-white overflow-y-scroll h-screen">
+                        <li
+                            class="p-2 duration-300 ease-in-out group">
+                            <span class="px-1 py-2 text-lg font-semibold duration-300 border-l-2 border-white group-hover:bg-white group-hover:rounded group-hover:text-blue-600 ">Styling</span>
+                            <ul class="flex flex-col px-5 py-3 my-3 space-y-1 rounded w-72 md:w-full">
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Typography</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Colors</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Buttons</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Tables</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Forms</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Breadcrumbs</li>
+                            </ul>
+                        </li>
+                        <li
+                            class="p-2 duration-300 ease-in-out group ">
+                            <span class="px-1 py-2 text-lg font-semibold transition-all duration-300 ease-in-out transform border-l-2 border-white group-hover:bg-white group-hover:rounded group-hover:text-blue-600">Components</span>
+                            <ul class="flex flex-col px-5 py-3 my-3 space-y-3 rounded w-72 md:w-full ">
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Cards</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Accordion</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Tooltip</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Modal</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Carousel</li>
+                            </ul>
+                        </li>
+                        <li
+                            class="p-2 duration-300 ease-in-out group">
+                            <span class="px-1 py-2 text-lg font-semibold duration-300 border-l-2 border-white group-hover:bg-white group-hover:rounded group-hover:text-blue-600 ">Navbar</span>
+                            <ul class="flex flex-col px-5 py-3 my-3 space-y-3 rounded w-72 md:w-full ">
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Simple Nav</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Nav with dropdown</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Megamenu</li>
+                            </ul>
+                        </li>
                         <li
                             class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Alert</li>
+                            Example</li>
+                        
                         <li
                             class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Navbar</li>
+                            Example</li>
+                        
                         <li
                             class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Megamenu</li>
-                        <li
-                            class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Navbar with Dropdown</li>
-                        <li
-                            class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Tooltip</li>
-                        <li
-                            class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Accordion</li>
-                        <li
-                            class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Modal</li>
-                        <li
-                            class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Carousel</li>
-                        <li
-                            class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Tabs</li>
+                            Example</li>
                     </ul>
                 </div>
 
                 
 
 
-                <section class="w-48">
+                <section class="w-48 h-screen" >
                     <h2 class="font-semibold">On this page</h2>
-                    sample
                 </section>
             </div>
         </section>
