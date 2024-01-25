@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../../dist/output.css" rel="stylesheet">
+    <title>Navbar</title>
+    <!--- voilaui-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/lightfair.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="">
+ <section id="code">   
+  <header>
+  <nav class="container-fluid mx-auto lg:px-16 bg-white py-3 px-2 shadow md:flex md:items-center md:justify-between ">
+    <div class="flex justify-between items-center mx-2">
+      <span class="text-2xl font-[poppins]">
+        <img src="../favicon (1).svg" class="h-10 inline">VoilaUI
+      </span>
+      <span class="text-3xl cursor-pointer md:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)" name="menu"></ion-icon>
+      </span>
+    </div>
+    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0  md:w-auto md:py-0 py-2 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      <li class="mx-3 my-4 md:my-0">
+        <a href="#" class="block py-2 font-medium text-gray-500 hover:text-cyan-500 rounded md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150" aria-current="page">Home</a>
+
+      </li>
+      <li class="mx-3 my-4 md:my-0">
+        <a href="#" class="block py-2 font-medium text-gray-500 hover:text-cyan-500 rounded md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150" aria-current="page">About</a>
+      </li>
+      <li class="mx-3 my-4 md:my-0">
+        <div class="relative inline-block text-left group">
+          <div id="dropdown-trigger-1" class="cursor-pointer hover:text-blue-300  transform scale-100 hover:scale-105 transition-transform duration-150 font-medium text-gray-500">Services</div>
+      
+          <div id="dropdown-menu-1" class="origin-top-right absolute w-40 py-2 left-20 md:left-0 mt-2 top-6  rounded-md shadow-lg bg-white  ring-1 ring-black ring-opacity-5 hidden opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-500">
+              <div class="" role="menu" aria-orientation="vertical">
+                  <a href="#" class="block py-2 px-2   text-sm  text-gray-700 hover:text-blue-700 hover:bg-slate-200" role="menuitem">Mobile-Development</a>
+                  <a href="#" class="block py-2 px-2   text-sm  text-gray-700 hover:text-blue-700 hover:bg-slate-200" role="menuitem">Web-Development</a>
+                 
+              </div>
+          </div>
+      </div>
+      </li>
+      <li class="mx-3 my-4 md:my-0">
+        <div class="relative inline-block text-left group">
+          <div id="dropdown-trigger-2" class="cursor-pointer block py-2 font-medium text-gray-500 hover:text-cyan-500 rounded md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150">Products</div>
+      
+          <div id="dropdown-menu-2" class="origin-top-right absolute mt-2 w-36 left-20 md:left-0 top-6   rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-500">
+              <div class="py-1 " role="menu" aria-orientation="vertical">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-200 hover:text-blue-600" role="menuitem">Option A</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-200 hover:text-blue-600" role="menuitem">Option B</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-200 hover:text-blue-600" role="menuitem">Option C</a>
+              </div>
+          </div>
+      </div>
+      </li>
+      <li class="mx-3 my-4 md:my-0">
+      <a href="#" class="block py-2 font-medium text-gray-500 hover:text-cyan-500 rounded md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150" aria-current="page">Contact</a>
+      </li>
+      <button class="bg-cyan-400 text-white font-[poppins] duration-500 px-6 py-2 mx-2 hover:bg-cyan-800 rounded-md">Get Started</button>
+    </ul>
+  </nav>
+</header>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="../../../dist/codeview.js"></script>
+  <script>
+    function Menu(e) {
+      let list = document.querySelector('ul');
+      if (e.getAttribute('name') === 'menu') {
+        e.setAttribute('name', 'close');
+        list.classList.add('top-[80px]');
+        list.classList.add('opacity-100');
+      } else {
+        e.setAttribute('name', 'menu');
+        list.classList.remove('top-[80px]');
+        list.classList.remove('opacity-100');
+      }
+    }
+    function setupDropdown(dropdownTriggerId, dropdownMenuId) {
+        const dropdownTrigger = document.getElementById(dropdownTriggerId);
+        const dropdownMenu = document.getElementById(dropdownMenuId);
+        let dropdownTimeout;
+
+        function showDropdown() {
+            clearTimeout(dropdownTimeout);
+            dropdownMenu.classList.remove('hidden');
+            dropdownMenu.classList.add('block');
+        }
+
+        function hideDropdown() {
+            dropdownTimeout = setTimeout(() => {
+                dropdownMenu.classList.remove('block');
+                dropdownMenu.classList.add('hidden');
+            }, 500); // Adjust the delay as needed (in milliseconds)
+        }
+
+        dropdownTrigger.addEventListener('mouseenter', showDropdown);
+        dropdownTrigger.addEventListener('mouseleave', hideDropdown);
+
+        dropdownMenu.addEventListener('mouseenter', showDropdown);
+        dropdownMenu.addEventListener('mouseleave', hideDropdown);
+    }
+
+    setupDropdown('dropdown-trigger-1', 'dropdown-menu-1');
+    setupDropdown('dropdown-trigger-2', 'dropdown-menu-2');
+    
+  </script>
+</body>
+
+</html>
