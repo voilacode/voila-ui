@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/output.css" rel="stylesheet">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Alert</title>
 </head>
 
@@ -14,12 +14,13 @@
         <nav class="flex items-center justify-between mx-auto">
             <!--logo image-->
             <div>
+               
                 <img src="../assets/VoilaUI.png" alt="logo" width="170px"
                     height="auto">
             </div>
 
             <!--list items-->
-            <div class="absolute top-[-100%] lg:static nav-links duration-500 bg-white mx-auto">
+            <!-- <div class="absolute top-[-100%] lg:static nav-links duration-500 bg-white mx-auto">
                 <ul class="flex flex-col w-screen lg:flex-row gap-y-5 lg:gap-12 lg:w-auto">
                     <li>
                         <a href="#" class="font-semibold hover:text-purple-800">Home</a>
@@ -36,7 +37,7 @@
                     
                     
                 </ul>
-            </div>
+            </div> -->
 
             <!--sign in btn-->
             <div class="flex items-center gap-2">
@@ -51,11 +52,18 @@
                             </svg>
                         </div>
                         <input type="search" id="default-search"
-                            class="block w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-lg ps-10 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            class="block w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-lg ps-10 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="Search.." required>
-                         </div>
+                    </div>
+                    
                 </form>
             </div>
+            <button class="px-1 py-1 bg-white border border-gray-300 rounded-full button lg:hidden" id="sidebarbtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-1" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+                </svg>
+                
+            </button>
         </nav>
     </header>
 
@@ -63,39 +71,55 @@
 
         <section class="p-4 mx-auto my-4 max-w-screen-2xl sm:px-16">
             <div class=" sm:space-x-8 sm:flex">
-                <div class=" sm:w-1/5">
-                    <ul class="flex flex-col p-2 space-y-4">
+                <div class="hidden h-screen overflow-hidden lg:block lg:w-1/5 md:w-1/3 1/3" id="sidebarmenu">
+                    <ul class="flex flex-col lg:p-2 space-y-4 bg-gradient-to-b from-violet-600 from-50% via-violet-400 to-blue-400 to-100%  text-white overflow-y-scroll h-screen">
+                        <li
+                            class="p-2 duration-300 ease-in-out group">
+                            <span class="px-1 py-2 text-lg font-semibold duration-300 border-l-2 border-white group-hover:bg-white group-hover:rounded group-hover:text-blue-600 ">Styling</span>
+                            <ul class="flex flex-col px-5 py-3 my-3 space-y-1 rounded w-72 md:w-full">
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Typography</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Colors</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Buttons</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Tables</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Forms</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Breadcrumbs</li>
+                            </ul>
+                        </li>
+                        <li
+                            class="p-2 duration-300 ease-in-out group ">
+                            <span class="px-1 py-2 text-lg font-semibold transition-all duration-300 ease-in-out transform border-l-2 border-white group-hover:bg-white group-hover:rounded group-hover:text-blue-600">Components</span>
+                            <ul class="flex flex-col px-5 py-3 my-3 space-y-3 rounded w-72 md:w-full ">
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Cards</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Accordion</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Tooltip</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Modal</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Carousel</li>
+                            </ul>
+                        </li>
+                        <li
+                            class="p-2 duration-300 ease-in-out group">
+                            <span class="px-1 py-2 text-lg font-semibold duration-300 border-l-2 border-white group-hover:bg-white group-hover:rounded group-hover:text-blue-600 ">Navbar</span>
+                            <ul class="flex flex-col px-5 py-3 my-3 space-y-3 rounded w-72 md:w-full ">
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Simple Nav</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Nav with dropdown</li>
+                                <li class="py-1 duration-300 border-b-2 border-transparent hover:border-white">Megamenu</li>
+                            </ul>
+                        </li>
                         <li
                             class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Alert</li>
+                            Example</li>
+                        
                         <li
                             class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Navbar</li>
+                            Example</li>
+                        
                         <li
                             class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Megamenu</li>
-                        <li
-                            class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Navbar with Dropdown</li>
-                        <li
-                            class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Tooltip</li>
-                        <li
-                            class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Accordion</li>
-                        <li
-                            class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Modal</li>
-                        <li
-                            class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Carousel</li>
-                        <li
-                            class="p-2 duration-300 ease-in-out border-b-2 border-gray-200 rounded-lg hover:border-blue-300">
-                            Tabs</li>
+                            Example</li>
                     </ul>
                 </div>
 
-                <div class="col-span-9 p-4 border border-gray-200 rounded-lg shadow-2xl sm:p-8 sm:w-4/5">
+                <div class="h-screen col-span-9 p-4 overflow-hidden overflow-y-scroll border border-gray-200 rounded-lg shadow-2xl sm:p-8 sm:w-4/5">
                     <h1 class="flex text-3xl font-semibold">
                         <div class="my-auto pe-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -105,15 +129,17 @@
 
                         <span>Alert</span>
                     </h1>
-                    <!-- <p class="my-2 text-justify text-gray-700">An "alert" typically refers to a user interface element
+                    <p class="my-2 text-justify text-gray-700">An "alert" typically refers to a user interface element
                         that displays a brief message to provide information, feedback, or notifications to the user. It
                         is a simple and commonly used way to communicate with users in a browser environment. Alerts are
                         often used to convey important information or prompt the user for action.</p>
-                    <p class="my-2 text-justify text-gray-700">VoilaUI uses different ids to provide the functionality
-                        of making the alert appear when clicked on the button which is the id <i
-                            class="text-emerald-500">showBtn</i> for the below case </p> -->
+                        <p class="my-2 text-justify text-gray-700">
+                            VoilaUI uses different classes to provide the functionality of making the alert appear when clicked on the button with the class
+                            <code class="text-red-500">alert-close</code> for the below cases.
+                        </p>
+                        
                     
-                    <h3 class="my-2 text-xl font-semibold "> Heading1 </h3>        
+                    <h3 class="my-2 text-xl font-semibold "> Bordered styles </h3>        
                     
                     <section class="code_container">
                         <div class="flex justify-between mb-2">
@@ -171,11 +197,10 @@
                     </section>
 
 
-                    <h3 class="my-2 text-xl font-semibold "> Heading2 </h3> 
+                    <h3 class="my-2 text-xl font-semibold "> Custom Varients </h3> 
 
-                    <!-- <p class="mt-2 text-justify text-gray-700">The alert container includes a close button which will
-                        come into action by using the id <i class="text-emerald-500">closeBtn</i> in the alert box
-                        container</p> -->
+                    <p class="mt-2 text-justify text-gray-700">These alert examples showcase different use cases with distinct styles and content.
+                        Customize the alerts based on your needs.</p>
 
                         <section class="code_container">
                             <div class="flex justify-between mb-2">
@@ -234,13 +259,29 @@
                 </div>
 
 
-                <section class="w-48">
-                    <h2 class="font-semibold">On this page</h2>
-                    sample
+                <section class="w-48 p-4">
+                    <h2 class="mb-2 text-lg font-semibold">On this page</h2>
+                    <ul class="pl-0 list-none">
+                        <li class="mb-1">
+                            <a href="#alert" class="text-blue-600 hover:underline focus:underline">Alert</a>
+                        </li>
+                        <li class="mb-1">
+                            <a href="#bordered-styles" class="text-blue-600 hover:underline focus:underline">Bordered styles</a>
+                        </li>
+                        <li class="mb-1">
+                            <a href="#custom-variants" class="text-blue-600 hover:underline focus:underline">Custom Variants</a>
+                        </li>
+                    </ul>
                 </section>
+                
             </div>
         </section>
     </main>
+
+    <footer class="p-4 mx-auto text-center border-t max-w-screen-2xl sm:px-16">
+        <p class="text-gray-500">© 2024 VoilaUI</p>
+    </footer>
+    
 
     <!--- voilaui-->
     <script src="../dist/voilaui.js"></script>
@@ -250,6 +291,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
     <script>hljs.highlightAll();</script>
+   
 
 </body>
 

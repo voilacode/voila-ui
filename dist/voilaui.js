@@ -196,3 +196,22 @@ if (document.getElementById('scrollToTop')) {
     });
 }
 
+//side bar 
+let sidebarmenu = document.getElementById('sidebarmenu');
+let sidebarbtn = document.getElementById('sidebarbtn');
+
+function displaybar(){
+    let check =  sidebarmenu.classList.contains('hidden');
+    if(check){
+        sidebarmenu.classList.remove('hidden');
+    }
+    else{
+        sidebarmenu.classList.add('hidden');
+    }
+
+}
+
+sidebarbtn.addEventListener('click', function(){
+    displaybar();
+})
+
