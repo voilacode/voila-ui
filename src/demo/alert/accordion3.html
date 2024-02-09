@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Innovative Accordion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/lightfair.min.css">
+    <style>
+        /* Custom styles for the accordion */
+        .accordion-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 0.375rem;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+            transition: border 0.3s;
+        }
+
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #f8fafc;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .accordion-content {
+            padding: 1rem;
+            background-color: #edf2f7;
+            display: none;
+            transition: display 0.3s;
+        }
+
+        .accordion-item.active {
+            border: 1px solid #4299e1;
+        }
+
+        .accordion-item.active .accordion-header {
+            background-color: #ebf8ff;
+        }
+
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+
+        .accordion-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: #4299e1;
+            transition: transform 0.3s;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="p-2 m-0">
+    <div class="w-full h-full md:w-1/2" id="code">
+        <!-- First Section -->
+        <div class="accordion-item" id="section1">
+            <div class="accordion-header" onclick="toggleAccordion('section1')">
+                <div>Section 1</div>
+                <div class="accordion-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M6.293 5.293a1 1 0 0 1 1.414 0L10 8.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-3 3a1 1 0 0 1-1.414 0l-3-3a1 1 0 0 1 0-1.414z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="accordion-content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, expedita earum excepturi veritatis, odit
+                neque sed porro doloremque, quam blanditiis amet est ea quaerat vitae exercitationem quasi. Assumenda,
+                animi voluptas!
+            </div>
+        </div>
+
+        <!-- Second Section -->
+        <div class="accordion-item" id="section2">
+            <div class="accordion-header" onclick="toggleAccordion('section2')">
+                <div>Section 2</div>
+                <div class="accordion-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M6.293 5.293a1 1 0 0 1 1.414 0L10 8.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-3 3a1 1 0 0 1-1.414 0l-3-3a1 1 0 0 1 0-1.414z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="accordion-content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, expedita earum excepturi veritatis, odit
+                neque sed porro doloremque, quam blanditiis amet est ea quaerat vitae exercitationem quasi. Assumenda,
+                animi voluptas!
+            </div>
+        </div>
+
+        <!-- Third Section -->
+        <div class="accordion-item" id="section3">
+            <div class="accordion-header" onclick="toggleAccordion('section3')">
+                <div>Section 3</div>
+                <div class="accordion-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M6.293 5.293a1 1 0 0 1 1.414 0L10 8.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-3 3a1 1 0 0 1-1.414 0l-3-3a1 1 0 0 1 0-1.414z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="accordion-content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, expedita earum excepturi veritatis, odit
+                neque sed porro doloremque, quam blanditiis amet est ea quaerat vitae exercitationem quasi. Assumenda,
+                animi voluptas!
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="../../../dist/codeview.js"></script>
+    <script>
+        function toggleAccordion(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('active');
+
+            // Close other sections if the current section is active
+            const otherSections = document.querySelectorAll('.accordion-item');
+            otherSections.forEach((otherSection) => {
+                if (otherSection !== section && otherSection.classList.contains('active')) {
+                    otherSection.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
